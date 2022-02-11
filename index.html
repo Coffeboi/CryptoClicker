@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CryptoClicker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <div class="xkrAmount">
+      <h1 id="xkr">XKR</h1>
+    </div>
+    
+    <div class="button">
+      <img src="xkr.png" alt="XKR" id="theXKR" onclick="Clicked()"/>
+    </div>
+
+    <div class="store">
+      <h1 id="storeTitle">Kryptokrona Store</h1>
+
+      <div class="items">
+        <a id="item" onclick="firstLevel()">
+          <div id="firstLevel" style="display: inline">0 bought!</div> 100 XKR - Cursor (+1 clicks!)
+        </a>
+      </div>
+      
+      <div class="items">
+        <a id="item" onclick="secondLevel()">
+          <div id="secondLevel" style="display: inline">0 bought!</div> 500 XKR - Cursor (+10 clicks!)
+        </a>
+      </div>
+    </div>
+
+    <div class="items">
+      <a id="item" onclick="thirdLevel()">
+        <div id="thirdLevel" style="display: inline">0 bought!</div> 1000 XKR - Cursor (+1 XKR/s!)
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+html, body, html * {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  text-align: center;
+}
+
+body {background-color: #252725;}
+
+.xkrAmount {
+  background-color: #252730;
+  border: 1;
+  border-radius: 1em;
+  box-shadow: 5px 5px 5px rgba(0, 0, 1, 1);
+  width: 10%;
+  left: 840px;
+  position: relative;
+}
+
+.button {
+  background-color: #252728;
+  width: 300px;
+  position: relative;
+  left: 750px;
+  right: 500px;
+  padding: 15px 32px;
+  border: 1;
+  border-radius: 1em;
+  box-shadow: 5px 5px 5px rgba(0, 0, 1, 1);
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+.store {
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid black;
+  margin: 30px;
+  padding: 5px;
+  background-color: #252729;
+}
+
+img {
+  width: 300px;
+  height: 90px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+a {
+  transition: 0.7s;
+}
+
+a:hover {
+  cursor: pointer;
+  color: grey;
+}
