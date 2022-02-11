@@ -47,16 +47,3 @@ function secondLevel() {
     alert("You do not have enough XKR!")
   }
 };
-
-function thirdLevel() {
-  if (count >= 1000) {
-    count-=500
-    let word = " XKR";
-    let xkrCount = document.getElementById("xkr").innerHTML = count+word;
-    secondLevelAMOUNT+=1
-    document.getElementById("secondLevel").innerHTML = secondLevelAMOUNT+" bought!";
-  }
-  else {
-    alert("You do not have enough XKR!")
-  }  
-};
