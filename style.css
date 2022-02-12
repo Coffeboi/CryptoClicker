@@ -10,7 +10,6 @@ body {background-color: #252725;}
 
 .xkrAmount {
   background-color: #252730;
-  border: 1;
   border-radius: 1em;
   box-shadow: 5px 5px 5px rgba(0, 0, 1, 1);
   width: 10%;
@@ -21,7 +20,7 @@ body {background-color: #252725;}
 .button {
   background-color: #252728;
   width: 300px;
-  position: relative;
+  position: absolute;
   left: 750px;
   right: 500px;
   padding: 15px 32px;
@@ -35,10 +34,25 @@ body {background-color: #252725;}
   box-shadow: none;
 }
 
+#XP {
+  position: absolute;
+  margin: 160px;
+  left: 50px;
+  max-width: 1400px;
+  border: 1px;
+  border-radius: 1em;
+  box-shadow: 5px 5px 5px rgba(0, 0, 1, 1);
+  background: #301934;
+  transition: width 200ms ease-in-out;
+  overflow: hidden;
+}
+
 .store {
+  position: absolute;
+  width: 1400px;
   font-family: 'Roboto', sans-serif;
   border: 2px solid black;
-  margin: 30px;
+  margin: 200px;
   padding: 5px;
   background-color: #252729;
 }

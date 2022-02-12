@@ -4,30 +4,41 @@ let clicks = 1;
 let firstLevelAMOUNT = 0;
 let secondLevelAMOUNT = 0;
 
-
-
-document.getElementById("xkr").innerHTML = count+" XKR";
-
+//The clicker
 function Clicked() {
-  count+=clicks;
+  count += clicks;
   let word = " XKR";
   document.getElementById("xkr").innerHTML = "";
-  let xkrCount = document.getElementById("xkr").innerHTML = count+word;
+  let xkrCount = document.getElementById("xkr").innerHTML = count + word;
 };
 
-function incrementSeconds() {
-  seconds += 1;
-  
-}  
+//XP system
+var currentXP = 0;
+var maxXP = 500;
+var gainXP = 50;
+var level = 1;
+document.getElementById("level").innerHTML = "Level : " + level;
 
+//XP function
+function XPBar() {
+  if (Clicked) {
+    (currentXP += gainXP);
+    percentage = (currentXP / maxXP) * 100;
+    document.getElementById("XP").style.width = percentage + '%';
+  } else {
+  } console.log('Error!')
+}
+XPBar();
+
+//Levels
 function firstLevel() {
   if (count >= 100) {
-    clicks+=1
-    count-=100
+    clicks += 1
+    count -= 100
     let word = " XKR";
-    let xkrCount = document.getElementById("xkr").innerHTML = count+word;
-    firstLevelAMOUNT+=1
-    document.getElementById("firstLevel").innerHTML = firstLevelAMOUNT+" bought!"; 
+    let xkrCount = document.getElementById("xkr").innerHTML = count + word;
+    firstLevelAMOUNT += 1
+    document.getElementById("firstLevel").innerHTML = firstLevelAMOUNT + " bought!";
   }
   else {
     alert("You do not have enough XKR!")
@@ -36,12 +47,12 @@ function firstLevel() {
 
 function secondLevel() {
   if (count >= 500) {
-    clicks+=10
-    count-=500
+    clicks += 10
+    count -= 500
     let word = " XKR";
-    let xkrCount = document.getElementById("xkr").innerHTML = count+word;
-    secondLevelAMOUNT+=1
-    document.getElementById("secondLevel").innerHTML = secondLevelAMOUNT+" bought!";
+    let xkrCount = document.getElementById("xkr").innerHTML = count + word;
+    secondLevelAMOUNT += 1
+    document.getElementById("secondLevel").innerHTML = secondLevelAMOUNT + " bought!";
   }
   else {
     alert("You do not have enough XKR!")
