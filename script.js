@@ -1,5 +1,4 @@
 let count = 0;
-let cps = 0;
 let clicks = 1;
 let firstLevelAMOUNT = 0;
 let secondLevelAMOUNT = 0;
