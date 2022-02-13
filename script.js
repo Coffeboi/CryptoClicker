@@ -18,21 +18,20 @@ function Clicked() {
   let xkrCount = document.getElementById("xkr").innerHTML = count + word;
   document.getElementById("level").innerHTML = "Level : " + level;
 
-  //Adds XP for every click
-  currentXP += gainXP;
-  document.getElementById("XP").style.width = percentage + '%'
-  percentage = (currentXP / maxXP) * 100;
-
   //Leveling up
   levelUp()
-};
-
-function levelUp() {
-  if (currentXP === maxXP) {
-    (level++ && (percentage = (currentXP / maxXP) / 100));
-    (maxXP *= 2);
+  function levelUp() {
+    if (currentXP >= maxXP) {
+      (level++ && (document.getElementById('XP').style.width = '150px'));
+      (maxXP *= 5);
+    }
   }
-}
+
+  //Adds XP for every click
+  currentXP += gainXP;
+  percentage = (currentXP / maxXP) * 100;
+  document.getElementById("XP").style.width = percentage + '%'
+};
 
 //Levels
 function firstLevel() {
