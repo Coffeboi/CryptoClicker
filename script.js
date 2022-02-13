@@ -4,32 +4,32 @@ let clicks = 1;
 let firstLevelAMOUNT = 0;
 let secondLevelAMOUNT = 0;
 
+//XP system
+var percentage;
+var currentXP = 0;
+var maxXP = 500;
+var gainXP = 50;
+let level = 1;
+document.getElementById("level").innerHTML = "Level : " + level;
+
 //The clicker
 function Clicked() {
   count += clicks;
   let word = " XKR";
   document.getElementById("xkr").innerHTML = "";
   let xkrCount = document.getElementById("xkr").innerHTML = count + word;
+
+  //Adds XP for every click
+  currentXP += gainXP;
+  percentage = (currentXP / maxXP) * 100;
+  document.getElementById("XP").style.width = percentage + '%'
 };
 
-//XP system
-var currentXP = 0;
-var maxXP = 500;
-var gainXP = 50;
-var level = 1;
-document.getElementById("level").innerHTML = "Level : " + level;
-
-//XP function
-function XPBar() {
-  if (Clicked) {
-    (currentXP += gainXP);
-    percentage = (currentXP / maxXP) * 100;
-    document.getElementById("XP").style.width = percentage + '%';
-  } else {
-  } console.log('Error!')
+function levelUp() {
+  if (currentXP === maxXP) {
+    level++;
+  }
 }
-XPBar();
-
 //Levels
 function firstLevel() {
   if (count >= 100) {
