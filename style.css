@@ -38,6 +38,7 @@ body {background-color: #252725;}
   position: absolute;
   margin: 160px;
   left: 50px;
+  width: 150px;
   max-width: 1400px;
   border: 1px;
   border-radius: 1em;

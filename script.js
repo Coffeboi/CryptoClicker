@@ -10,7 +10,6 @@ var maxXP = 500;
 var gainXP = 50;
 let level = 1;
 
-
 //The clicker
 function Clicked() {
   count += clicks;
@@ -19,22 +18,19 @@ function Clicked() {
   let xkrCount = document.getElementById("xkr").innerHTML = count + word;
   document.getElementById("level").innerHTML = "Level : " + level;
 
-  if (currentXP >= maxXP) {
-    level++
-  }
-
   //Adds XP for every click
   currentXP += gainXP;
-  percentage = (currentXP / maxXP) * 100;
   document.getElementById("XP").style.width = percentage + '%'
+  percentage = (currentXP / maxXP) * 100;
 
+  //Leveling up
   levelUp()
 };
 
-//Advance one level when required xp is met
 function levelUp() {
   if (currentXP === maxXP) {
-    level++;
+    (level++ && (percentage = (currentXP / maxXP) / 100));
+    (maxXP *= 2);
   }
 }
 
